@@ -13,8 +13,8 @@ class JDatum < ActiveRecord::Base
 	end
 
 	def setoutput
-		parsed = JSON.parse(self.input)
-		self.output = init_parse(parsed)
+		parsed = JSON.parse(self.jInput)
+		self.jOutput = init_parse(parsed)
 	end
 
 	def init_parse(temp_parsed)
